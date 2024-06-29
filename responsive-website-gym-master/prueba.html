@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FuertaFit - Transformaciones</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #FFFFFF;
+      color: #000000;
+    }
+    .heading {
+      text-align: center;
+      padding: 20px;
+    }
+    .heading h1 {
+      font-size: 2em;
+      line-height: 1.2;
+    }
+    .carousel-container {
+      position: relative;
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
+    .carousel-images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .carousel-images img {
+      min-width: 100%;
+    }
+    .carousel-prev,
+    .carousel-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .carousel-prev {
+      left: 0;
+    }
+    .carousel-next {
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="heading">
+  <h1>MÁS DE 7 AÑOS DE EXPERIENCIA Y MÁS DE <br>150.000 VIDAS CAMBIADAS</h1>
+</div>
+
+<div class="carousel-container">
+  <div class="carousel-images">
+    <img src="https://fuertafit.com/wp-content/uploads/Cambios_AB_2022-THEGREFG-1.webp" alt="Cambios_AB_2022-THEGREFG">
+    <img src="https://fuertafit.com/wp-content/uploads/A.-Salvachua.webp" alt="A.-Salvachua">
+    <img src="https://fuertafit.com/wp-content/uploads/Cambios_HOMBRES-sergio-peinado.webp" alt="Cambios_HOMBRES-sergio-peinado">
+    <img src="https://fuertafit.com/wp-content/uploads/I.-Montdiamont_webp.webp" alt="I.-Montdiamont">
+    <img src="https://fuertafit.com/wp-content/uploads/l.cv-1.webp" alt="l.cv-1">
+    <img src="https://fuertafit.com/wp-content/uploads/Cambios_HOMBRES-R-CE-1.webp" alt="Cambios_HOMBRES-R-CE">
+    <img src="https://fuertafit.com/wp-content/uploads/Cambios_A-manzanares_2022.webp" alt="Cambios_A-manzanares_2022">
+    <img src="https://fuertafit.com/wp-content/uploads/Cambios_Jaime-Peinado_resultado-1.webp" alt="Cambios_Jaime-Peinado_resultado">
+    <img src="https://fuertafit.com/wp-content/uploads/Cambios_AB_2022-C-Ro.webp" alt="Cambios_AB_2022-C-Ro">
+    <img src="https://fuertafit.com/wp-content/uploads/Cambios_A-Aldeguer_2022-1.webp" alt="Cambios_A-Aldeguer_2022">
+    <img src="https://fuertafit.com/wp-content/uploads/Cambios_MUJERES-A-VERDE.webp" alt="Cambios_MUJERES-A-VERDE">
+  </div>
+  <button class="carousel-prev">&lt;</button>
+  <button class="carousel-next">&gt;</button>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.querySelector('.carousel-images');
+    const prevButton = document.querySelector('.carousel-prev');
+    const nextButton = document.querySelector('.carousel-next');
+    let currentIndex = 0;
+
+    prevButton.addEventListener('click', () => {
+      currentIndex = (currentIndex > 0) ? currentIndex - 1 : carousel.children.length - 1;
+      updateCarousel();
+    });
+
+    nextButton.addEventListener('click', () => {
+      currentIndex = (currentIndex < carousel.children.length - 1) ? currentIndex + 1 : 0;
+      updateCarousel();
+    });
+
+    function updateCarousel() {
+      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+  });
+</script>
+
+</body>
+</html>

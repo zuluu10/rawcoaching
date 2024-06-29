@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MFitness responsive website built using HTML5, CSS3, and JavaScript. The complete layout of the page is built using grid layout and flexbox with some cool animations."
+    />
+    <title>Raw Coaching</title>
+    <link rel="icon" type="image/png" sizes="x2" href="logo.png" />
+    <link rel="stylesheet" href="fonts/stylesheet.css" media="screen" />
+    <link rel="stylesheet" href="css/style.css" media="screen" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header" id="home">
+      <div class="container">
+        <nav class="header-navigation" aria-label="navigation">
+          <div class="logo">
+            <a href="#home">
+              <img src="img/logo.png" alt="Raw Coaching Logo" class="logo-img">
+            </a>
+          </div>
+          <img
+            src="img/nav-icon.svg"
+            alt="navigation icon"
+            class="nav-icon"
+            width="30"
+            height="30"
+          />
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#about">Sobre nosotros</a></li>
+            <li><a href="#courses">Transformaciones</a></li>
+            <li><a href="#gay">Planes</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="section-hero">
+        <div class="container hero-box">
+          <div class="hero-content margin-bottom">
+            <h1 class="heading heading--1 margin-bottom">Entrenamiento natural y efectivo </h1>
+            <p class="description" size ="">
+              Construye el físico que te mereces.
+            </p>
+          </div>
+          <div class="btn-group">
+            <a class="btn btn__primary margin-right margin-bottom" href="https://wa.me/1234567890">
+              Entrena con nosotros
+            </a>
+            <a class="btn btn__primary margin-right margin-bottom" href="#section3">
+              Planes
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION ABOUT -->
+      <section class="section-about" id="about">
+        <div class="about-box container">
+          <div class="about-box__content" data-aos="fade-up">
+            <h2 class="heading heading--2">
+              ¿Quieres un <span class="highlight">Cambio</span>?
+            </h2>
+            <p>
+              Basándome en mi experiencia personal, puedo afirmar que un cambio es posible si realmente lo deseas y te lo propones. Con mi apoyo, lograrlo no será complicado. Te mostraré que puedes alcanzar tus metas sin sufrimiento, solo con determinación y voluntad.
+            </p>  
+            <p> 
+              La clave para obtener el cuerpo que deseas de manera saludable radica en la combinación de una buena alimentación y ejercicio.
+            </p>  
+            <p> 
+              Si estás leyendo esto, ya has tomado el primer y más crucial paso.
+            </p>   
+            <p>
+              ¡Ánimo! Este es solo el comienzo de tu camino.
+            </p>
+            
+          </div>
+          <figure class="about-box__image" data-aos="fade-up">
+            <img
+              src="img/quieresuncambio.png"
+              alt="about-image-one"
+              width="350"
+              height="233"
+            />
+            
+          </figure>
+        </div>
+      </section>
+
+      <!-- SECTION RESULTADOS -->
+      <section class="section-courses" id="courses">
+        <h2 class="heading heading--2 underline">Transformaciones</h2>
+        <div class="carousel-container">
+          <div class="carousel-images">
+            <div class="carousel-box">
+              <img src="img/muchachos/small_lucho.png" alt="Cambios_AB_2022-THEGREFG">
+              <img src="img/muchachos/biglucho.png" alt="A.-Salvachua">
+            </div>
+            <div class="carousel-box">
+              <img src="img/muchachos/flaco.png" alt="Cambios_HOMBRES-sergio-peinado">
+              <img src="img/muchachos/built.png" alt="I.-Montdiamont">
+            </div>
+            <div class="carousel-box">
+              <img src="img/muchachos/peña.png" alt="l.cv-1">
+              <img src="img/muchachos/jorge.png" alt="Cambios_HOMBRES-R-CE">
+            </div>
+            <div class="carousel-box">
+              <img src="img/muchachos/gordobiga.png" alt="Cambios_A-manzanares_2022">
+              <img src="img/muchachos/gordoflaco.png" alt="Cambios_Jaime-Peinado_resultado">
+            </div>
+          </div>
+          <button class="carousel-prev">&lt;</button>
+          <button class="carousel-next">&gt;</button>
+        </div>
+      
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const carousel = document.querySelector('.carousel-images');
+            const prevButton = document.querySelector('.carousel-prev');
+            const nextButton = document.querySelector('.carousel-next');
+            const totalBoxes = document.querySelectorAll('.carousel-box').length;
+            let currentIndex = 0;
+      
+            prevButton.addEventListener('click', () => {
+              currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalBoxes - 1;
+              updateCarousel();
+            });
+      
+            nextButton.addEventListener('click', () => {
+              currentIndex = (currentIndex < totalBoxes - 1) ? currentIndex + 1 : 0;
+              updateCarousel();
+            });
+      
+            function updateCarousel() {
+              carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+          });
+        </script>
+      
+        <h2 class="heading heading--2 underline">Tú puedes ser el siguiente</h2>
+      </section>
+      
+      
+      
+
+
+      <!-- SECTION PRICING -->
+
+<section class="section2" id="gay">
+  <h1 class="text-center my-2" style = "font-size : 6rem;">Planes</h1>
+  <p class="text-center my-2" style = "font-size : 4rem">Resultados asegurados</p>
+  <div class="boxes flex justify-center">
+    <div class="box">
+      <h2>Básico</h2>
+      <ul>
+        <li class="highlighted"><s>$149.900</s></li>
+        <li class="highlighted">$120.000</li>
+        
+        <li><button class="btn signup-btn" data-whatsapp="https://wa.me/1234567890">Inscríbete</button></li>
+      </ul>
+    </div>
+    <script>
+      document.querySelectorAll('.signup-btn').forEach(button => {
+        button.addEventListener('click', () => {
+          const whatsappLink = button.getAttribute('data-whatsapp');
+          window.open(whatsappLink, '_blank');
+        });
+      });
+    </script>
+    
+    <div class="box">
+      <h2>Intermedio</h2>
+      <ul>
+        <li class="highlighted"><s>$250.000</s></li>
+        <li class="highlighted">$200.000</li>
+       
+        <li><button class="btn signup-btn" data-whatsapp="https://wa.me/1234567890">Inscribíte</button></li>
+      </ul>
+    </div>
+    <script>
+      document.querySelectorAll('.signup-btn').forEach(button => {
+        button.addEventListener('click', () => {
+          const whatsappLink = button.getAttribute('data-whatsapp');
+          window.open(whatsappLink, '_blank');
+        });
+      });
+    </script>
+    <div class="box">
+      <h2>Avanzado</h2>
+      <ul>
+        <li class="highlighted"><s>$400.000</s></li>
+        <li class="highlighted">$320.000</li>
+        
+        <li><button class="btn signup-btn" data-whatsapp="https://wa.me/1234567890">Inscríbete</button></li>
+      </ul>
+    </div>
+    <script>
+      document.querySelectorAll('.signup-btn').forEach(button => {
+        button.addEventListener('click', () => {
+          const whatsappLink = button.getAttribute('data-whatsapp');
+          window.open(whatsappLink, '_blank');
+        });
+      });
+    </script>
+  </div>
+</section>
+<hr>
+
+<!-- SECTION COMPARE PLANS -->
+
+<section id="section3" class="section3">
+  <h1 class="text-center my-2">Características</h1>
+  <div class="container plantable">
+    <table class="table text-center">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Básico</th>
+          <th>Intermedio </th>
+          <th>Avanzado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="text-start">Rutina personalizada</th>
+          <td>Sí</td>
+          <td>Sí</td>
+          <td>Sí</td>
+        </tr>
+        <tr>
+          <th scope="row" class="text-start">Acceso al coach</th>
+          <td>Limitado</td>
+          <td>Ilimitado</td>
+          <td>Ilimitado</td>
+        </tr>
+        <tr>
+          <th scope="row" class="text-start">Plan nutricional</th>
+          <td>Básico</td>
+          <td>Completo</td>
+          <td>Completo</td>
+        </tr>
+        <tr>
+          <th scope="row" class="text-start">Plantilla de planificación</th>
+          <td>Básico</td>
+          <td>Completo</td>
+          <td>Completo</td>
+        </tr>
+        <tr>
+          <th scope="row" class="text-start">Seguimiento continuo</th>
+          <td>Sí</td>
+          <td>Sí</td>
+          <td>Sí</td>
+        </tr>
+        <tr>
+          <th scope="row" class="text-start">Email support</th>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+        </tr>
+        <tr>
+          <th scope="row" class="text-start">Help center access</th>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+      <!-- SECTION OFFER -->
+      <section class="section-offer" id="offer">
+        <div class="offer-box">
+          <div class="offer" data-aos="fade-up">
+            <h2 class="heading heading--2 margin-bottom">
+              Si refieres a un amigo ambos obtienen un 20% de descuento!
+            </h2>
+            <p class="margin-bottom">
+              En Raw Coaching nos interesa el beneficio para todos! Refiere un amigo y obtén los beneficios.
+            </p>
+            <button class="btn btn__primary" data-whatsapp="https://wa.me/1234567890">Inscríbete</button>
+          </div>
+          <script>
+            document.querySelectorAll('.signup-btn').forEach(button => {
+              button.addEventListener('click', () => {
+                const whatsappLink = button.getAttribute('data-whatsapp');
+                window.open(whatsappLink, '_blank');
+              });
+            });
+          </script>
+          <div class="offer-img"></div>
+        </div>
+      </section>
+
+      <!-- SECTION COACHES -->
+
+      <!-- SECTION FOOTER -->
+<footer class="section-footer">
+  <div class="footer-box container">
+    <!-- Contact Details -->
+    <div class="contact-details">
+      <h3 class="footer-nav__title">Contacto</h3>
+      <ul class="contact-data">
+        <li>Teléfono: +123 456 7890</li>
+        <li>Email: rawcoachingcolombia@gmail.com</li>
+        <li class="social">
+          <a href="https://www.instagram.com/rawcoaching_col/"><img src="img/logotiktok.png" alt="Facebook" width="30" height="30"></a>
+          <a href="https://www.tiktok.com/@rawcoaching"><img src="img/logoinsta.png" alt="Instagram" width="30" height="30"></a>
+        </li>
+      </ul>
+    </div>
+    <!-- Quick Links -->
+    <div class="footer-nav">
+      <h3 class="footer-nav__title">Enlaces Rápidos</h3>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#about">Sobre Nosotros</a></li>
+        <li><a href="#gay">Planes</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </div>
+    <!-- Newsletter Subscription -->
+    <div class="newsletter">
+      <img src="img/logo.png">
+    </div>
+  </div>
+  <div class="legal">
+    <p class="text">© 2024 Raw Coaching. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+      
+
+      
+    </main>
+  </body>
+</html>
+
+
+

@@ -1,0 +1,78 @@
+.section2, .section3 {
+    padding: 50px 0;
+  }
+  
+  .section2 .boxes {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .section2 .box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section2 .box h2 {
+    margin-bottom: 20px;
+  }
+  
+  .section2 .box ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .section2 .box li {
+    margin-bottom: 10px;
+  }
+  
+  .section2 .box .highlighted {
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .section2 .box .btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .section3 .plantable {
+    margin-top: 20px;
+  }
+  
+  .section3 .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  
+  .section3 .table th, .section3 .table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .section3 .table th {
+    background-color: #f2f2f2;
+  }
+  
+  .section3 .table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .my-2 {
+    margin: 20px 0;
+  }
+  
+  
